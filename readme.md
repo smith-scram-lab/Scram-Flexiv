@@ -38,7 +38,7 @@ Safety is paramount when operating the Flexiv Rizon 4 robot. Please refer to the
 
 ## User Guides
 - [Startup Guide](docs/guides/Flexiv_Rizon_Quick_Start_Guide_V3_202301.pdf)
-- [Safety Protocol Document](path/to/Safety_Protocol.pdf)
+- [Safety Protocol Document](docs/safety/safety_protocol.md)
 - [Troubleshooting Tips](path/to/Troubleshooting.pdf)
 
 ## Maintenance Schedule
