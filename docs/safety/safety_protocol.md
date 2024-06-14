@@ -57,9 +57,10 @@
 
 ## Training and Authorization
 1. **Operator Training**:
+   - Every user must go through the Flexiv Rizon Quick Start Guide under the supervision of a trained person.
    - Ensure all operators receive **comprehensive training** on the safe use of the Flexiv Rizon 4 robot, including **start-up**, **operation**, **emergency procedures**, and **maintenance**.
 
-2. **Authorization**:
+3. **Authorization**:
    - Only **trained** and **authorized personnel** are allowed to operate the robot. **Unauthorized use** is strictly prohibited.
 
 By adhering to these safety protocols, we can ensure a **safe** and **productive** environment when using the Flexiv Rizon 4 robot. **Safety** is our top priority, and all team members must follow these guidelines diligently.
