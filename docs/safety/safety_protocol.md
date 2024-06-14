@@ -57,7 +57,7 @@
 
 ## Training and Authorization
 1. **Operator Training**:
-   - Every user must go through the Flexiv Rizon Quick Start Guide under the supervision of a trained person.
+   - Every user must go through the **_Flexiv Rizon Quick Start Guide_** under the supervision of a trained person.
    - Ensure all operators receive **comprehensive training** on the safe use of the Flexiv Rizon 4 robot, including **start-up**, **operation**, **emergency procedures**, and **maintenance**.
 
 3. **Authorization**:
