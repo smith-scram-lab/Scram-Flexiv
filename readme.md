@@ -37,7 +37,7 @@ Safety is paramount when operating the Flexiv Rizon 4 robot. Please refer to the
 - **Risk Assessment**: Conduct a thorough risk assessment before operating the robot.
 
 ## User Guides
-- [Startup Guide](path/to/Startup_Guide.pdf)
+- [Startup Guide](Manuals/Flexiv_Rizon_Quick_Start_Guide_V3_202301.pdf)
 - [Safety Protocol Document](path/to/Safety_Protocol.pdf)
 - [Troubleshooting Tips](path/to/Troubleshooting.pdf)
 
