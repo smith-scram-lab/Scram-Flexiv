@@ -43,6 +43,28 @@
    - Regularly **check the gripper** for wear and tear.
    - Ensure the gripper **releases any objects** it is holding before **shutting down the robot** to prevent damage to both the gripper and the objects.
 
+## Auto Mode Safety
+ 
+### Importance of Abiding by Auto-Mode Safety Protocol
+Adhering to the auto-mode safety protocols is crucial for several reasons:
+   - **Preventing Accidents**: Auto-mode allows the robot to operate autonomously and at full speed, which increases the risk of accidents if proper precautions are not taken. Ensuring the area is clear and using safety barriers helps prevent unintended collisions.
+   - **Quick Response to Errors**: Continuous monitoring and easy access to the emergency stop ensure that any errors or unexpected behaviors can be quickly addressed, minimizing potential damage and ensuring operator safety.
+   - 
+1. **Pre-Check**:
+   - **Ensure the work area** is clear of any **obstacles** and personnel before initiating auto-mode.
+   - **Verify** that the robot's programmed path does not interfere with any objects or barriers.
+
+2. **Use Safety Barriers**:
+   - **Implement safety barriers** or **light curtains** around the robot's operating area to prevent unauthorized access during auto-mode operations.
+
+3. **Monitoring**:
+   - **Continuously monitor** the robot during auto-mode to quickly respond to any errors or unexpected behaviors.
+   - Have an **operator present** who is familiar with the emergency stop procedures.
+
+4. **Emergency Stop**:
+   - **Ensure the emergency stop button** is easily accessible at all times and test it regularly.
+   - **Train all operators** on how to engage the emergency stop if an issue arises during auto-mode.
+
 ## Maintenance and Inspection
 1. **Regular Inspections**:
    - Conduct regular **inspections** of the robot, gripper, and associated equipment to check for signs of **wear**, **damage**, or **malfunction**.
