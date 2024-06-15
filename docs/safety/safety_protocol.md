@@ -60,8 +60,12 @@ Adhering to the auto-mode safety protocols is crucial for several reasons:
 3. **Monitoring**:
    - **Continuously monitor** the robot during auto-mode to quickly respond to any errors or unexpected behaviors.
    - Have an **operator present** who is familiar with the emergency stop procedures.
-
-4. **Emergency Stop**:
+     
+4. **Programming**:
+   - **Step through** the program in 10% speed before putting the code into use.
+   - If anything unexpected happens, engage the **Emergency Stop** immediately.
+     
+5. **Emergency Stop**:
    - **Ensure the emergency stop button** is easily accessible at all times and test it regularly.
    - **Train all operators** on how to engage the emergency stop if an issue arises during auto-mode.
 
