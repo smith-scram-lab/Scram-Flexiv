@@ -1,3 +1,15 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------
++ # Current State
+- 2024-06-21 Yicheng is working on CAD out the design for the safety boundry board for the table.
++ 2024-06-21 Yicheng is planning on purchasing a new usb drive to install ubuntu22.04 which comes with a native RT kernel.
+-
++
+-
++
+-
+====================================================================================================================================================
+
+
 
 # Scram-Flexiv
 
