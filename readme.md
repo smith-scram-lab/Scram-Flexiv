@@ -1,6 +1,7 @@
 ------------------------------------------------------------------------------------------
 + # Current State
-- 2024-06-21 Yicheng is working on CAD out the design for the safety boundry board for the table.
+- 2024-06-21 Yicheng have a half-finished CAD but I don't think it's necessary to move forward.
+  -- I think it's okay to just get a board cut to be an ellipse which has its major axis as 1830mm, minor axis 1600mm.
 + 2024-06-21 Yicheng is planning on purchasing a new usb drive to install ubuntu22.04 which comes with a native RT kernel.
 -
 +
