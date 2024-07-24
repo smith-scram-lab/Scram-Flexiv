@@ -169,6 +169,9 @@ Reboot and apply the changes
 
 `sudo reboot`
 
+### Check if the kernel is patched correctly
+`uname -r` and look for 'rt' keyword
+
 
 ## Troubleshooting
 Encountering issues? Check out our [Troubleshooting Guide](path/to/Troubleshooting.pdf) for solutions to common problems.
