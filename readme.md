@@ -42,7 +42,7 @@ Follow these steps to get started with the Flexiv Rizon 4 robot:
 
 ## Software Setup
 1. **Connect Teach Pendant**: Connect the teach pendant to the robot via Wi-Fi or a wired connection.
-2. **Initial Configuration**: Follow the instructions in the [User Manual](path/to/User_Manual.pdf) to perform the initial configuration and test-run your first program.
+2. **Initial Configuration**: Follow the instructions in the [User Manual](https://rdk.flexiv.com/manual/index.html) to perform the initial configuration and test-run your first program.
 3. **Flexiv Elements**: Use Flexiv Elements software to control the robot and execute programs. Refer to the [Training Video](path/to/Training_Video.pdf) for a detailed guide on using the software.
 
 ## Safety Protocols
