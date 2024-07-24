@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------------------
 + # Current State
 + 
-+ 2024-07-24 Yicheng now updating the software setup. 
++ 2024-07-24 Yicheng is now updating the software setup. 
 + 2024-07-24 The RT kernel is patched successfully. `5.15.160-rt77`
 + 2024-07-24 Yicheng start patching the new ubuntu20.04 native kernel according to the instructions listed in the [RT-Kernel-Patching](#RT-Kernel-Patching) section below
 + 2024-07-23 Yicheng installed a new ubuntu20.04 on another partition in the lab computer, name `scram-rt`
@@ -175,6 +175,8 @@ Reboot and apply the changes
 ### Check if the kernel is patched correctly
 `uname -r` and look for 'rt' keyword
 
+------------------------------------------
+
 ## Step By Step Software
 I'm a big conda user and I encourage you to do the same. :D
 
@@ -239,12 +241,29 @@ Here according to the manual we want to install numpy and spdlog
 `pip install numpy spdlog`
 
 ### Build Flexiv RDK
+**If you didn't follow the instruction in C++ building, go check on it and see what you need, where to get the rdk repository, don't skip to here. I assume you are following this STEP-BY-STEP**
+Build in another directory, in this case I choose `/flexiv_rdk_python` **obviously you need to `mkdir flexiv_rdk_python`**
 ```
-mkdir flexiv_rdk && cd flexiv_rdk
-mkdir build && cd build
+cd flexiv_rdk/build
+cmake .. -DCMAKE_INSTALL_PREFIX=~/flexiv_rdk_python/ -DINSTALL_PYTHON_RDK=ON
 ```
+If you encounter an issue saying the python version is not 3.10, go check if you activated your conda env.
+BECAUSE the lines above will install rdk for 3.10 by default
+Check the original manual for other python versions.
 
+### Install Python RDK
+```
+cd flexiv_rdk/build
+cmake --build . --target install --config Release
 
+```
+### Try it
+if the installation is successful, you should be able to do this 
+
+```
+python3
+import flexivrdk
+```
 
 
 ## Troubleshooting
