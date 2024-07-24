@@ -60,7 +60,80 @@ Safety is paramount when operating the Flexiv Rizon 4 robot. Please refer to the
 ## Maintenance Schedule
 Regular maintenance is crucial to keep the robot in optimal working condition. Refer to the [Maintenance Schedule](path/to/Maintenance_Schedule.pdf) for detailed instructions on maintaining the robot.
 
-## RT Kernel Patching
+## RT-Kernel-Patching 
+
+### (written on 07/24/2024)
+Followed the tutorial [here](https://mshields.name/blog/2023-08-30-preempt-rt-install-for-ubuntu-20-04/), some edits were made.
+
+`sudo apt-get install build-essential bc ca-certificates gnupg2 libssl-dev wget gawk flex bison dwarves zstd`
+
+`uname -r` --- 5.15.0-116-generic
+
+Find the suitable version of patch [here](https://wiki.linuxfoundation.org/realtime/preempt_rt_versions)
+
+Here I used 
+
+`wget https://cdn.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.160-rt77.patch.xz`
+
+`wget https://cdn.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.160-rt77.patch.sign`
+
+`wget https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.160.tar.xz`
+
+`wget https://www.kernel.org/pub/linux/kernel/v5.x/linux-5.15.160.tar.sign`
+
+`xz -dk patch-5.15.160-rt77.patch.xz`
+
+`xz -d linux-5.15.160.tar.xz `
+
+I skipped the verification step because the patch maintainer key listed in the instruction is no longer valid
+
+Probably you still should do it if you are patient enough. :D
+
+I installed `ncurses-dev` on the system at this point because some error were thrown
+
+`sudo apt-get install libncurses-dev`
+
+`tar xf linux-5.15.160.tar`
+
+`cd linux-5.15.160`
+
+`cp /boot/config-5.15.0-116-generic .config`
+
+`make menuconfig`
+
+At this point a graphic UI should be seen in your terminal
+
+Activate “Fully Preemptible Kernel (Real-Time)” option from “General setup” / “Preemption Model” then SAVE and EXIT.(quote the [original tutorial](https://mshields.name/blog/2023-08-30-preempt-rt-install-for-ubuntu-20-04/))
+
+Now a fix need to be done to the `.config` file, according to [this thread](https://stackoverflow.com/questions/67670169/compiling-kernel-gives-error-no-rule-to-make-target-debian-certs-debian-uefi-ce).
+
+You can use whatever text editor, find the `Certificates for signature checking section` and change it to be looking like the following
+```
+#
+# Certificates for signature checking
+#
+CONFIG_MODULE_SIG_KEY="certs/signing_key.pem"
+CONFIG_MODULE_SIG_KEY_TYPE_RSA=y
+CONFIG_MODULE_SIG_KEY_TYPE_ECDSA=y
+CONFIG_SYSTEM_TRUSTED_KEYRING=y
+CONFIG_SYSTEM_TRUSTED_KEYS="/usr/local/src/debian/canonical-certs.pem"
+CONFIG_SYSTEM_EXTRA_CERTIFICATE=y
+CONFIG_SYSTEM_EXTRA_CERTIFICATE_SIZE=4096
+CONFIG_SECONDARY_TRUSTED_KEYRING=y
+CONFIG_SYSTEM_BLACKLIST_KEYRING=y
+CONFIG_SYSTEM_BLACKLIST_HASH_LIST=""
+CONFIG_SYSTEM_REVOCATION_LIST=y
+CONFIG_SYSTEM_REVOCATION_KEYS="/usr/local/src/debian/canonical-revoked-certs.pem"
+# end of Certificates for signature checking
+
+```
+
+
+
+
+
+
+
 
 ## Troubleshooting
 Encountering issues? Check out our [Troubleshooting Guide](path/to/Troubleshooting.pdf) for solutions to common problems.
