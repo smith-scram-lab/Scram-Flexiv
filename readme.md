@@ -69,7 +69,7 @@ Either with cable or not
 Then enable the robot, click 'on' 
 
 #### Activate RDK server.
-OOPS === This is where I left ---- Will be back
+Follow this [guide](https://rdk.flexiv.com/manual/activate_rdk_server.html) Because this is a robot-side setting rather than a user side setting. 
 
 -----------------------------------------------------------
 
