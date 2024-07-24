@@ -22,6 +22,7 @@ Follow these steps to get started with the Flexiv Rizon 4 robot:
 1. [Software Setup](#software-setup)
 2. [Safety Protocols](#safety-protocols)
 3. [User Guides](#user-guides)
+4. [Hello World](#Hello-world)
 
 ## Software Setup
 1. **Connect Teach Pendant**: Connect the teach pendant to the robot via Wi-Fi or a wired connection.
@@ -42,6 +43,17 @@ Safety is paramount when operating the Flexiv Rizon 4 robot. Please refer to the
 
 ## Maintenance Schedule
 Regular maintenance is crucial to keep the robot in optimal working condition. Refer to the [Maintenance Schedule](path/to/Maintenance_Schedule.pdf) for detailed instructions on maintaining the robot.
+
+## Hello World
+Here in this section is also a step-by-step guide to play with Flexiv Rizon 4 in our lab.
+I assume you start with a blank system. (Just like what I have now)
+And I assume you followed the [Getting started Section](#Getting-started)
+
+**Meaning you already finished the first three steps, especially went over the safety protocol**
+
+
+-----------------------------------------------------------
+
 
 ## RT-Kernel-Patching 
 
