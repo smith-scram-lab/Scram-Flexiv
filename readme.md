@@ -1,23 +1,3 @@
-------------------------------------------------------------------------------------------
-+ # Current State
-+ 
-+ 2024-07-24 Yicheng is now updating the software setup. 
-+ 2024-07-24 The RT kernel is patched successfully. `5.15.160-rt77`
-+ 2024-07-24 Yicheng start patching the new ubuntu20.04 native kernel according to the instructions listed in the [RT-Kernel-Patching](#RT-Kernel-Patching) section below
-+ 2024-07-23 Yicheng installed a new ubuntu20.04 on another partition in the lab computer, name `scram-rt`
-+ 2024-07-21 Yicheng discovered that the native RT kernel in ubuntu22.04 requires a paid subscription
-- 2024-06-21 Yicheng have a half-finished CAD but I don't think it's necessary to move forward.
-  -- I think it's okay to just get a board cut to be an ellipse which has its major axis as 1830mm, minor axis 1600mm.
-+ 2024-06-21 Yicheng is planning on purchasing a new usb drive to install ubuntu22.04 which comes with a native RT kernel.
--
-+
--
-+
--
-------------------------------------------------------------------------------------------
-
-
-
 # Scram-Flexiv
 
 Welcome to the Scram-Flexiv repository! This repository contains documentation, guides, and resources for using the Flexiv Rizon 4 robot in our lab.
@@ -271,6 +251,25 @@ Encountering issues? Check out our [Troubleshooting Guide](path/to/Troubleshooti
 
 ## Contributing
 We welcome contributions from the community! If you would like to contribute to this repository, please fork the repo and create a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+------------------------------------------------------------------------------------------
++ # Current State
++ 2024-07-24 Yicheng finished updating the software setup for cpp and python rdk installation
++ 2024-07-24 Yicheng is now updating the software setup. 
++ 2024-07-24 The RT kernel is patched successfully. `5.15.160-rt77`
++ 2024-07-24 Yicheng start patching the new ubuntu20.04 native kernel according to the instructions listed in the [RT-Kernel-Patching](#RT-Kernel-Patching) section below
++ 2024-07-23 Yicheng installed a new ubuntu20.04 on another partition in the lab computer, name `scram-rt`
++ 2024-07-21 Yicheng discovered that the native RT kernel in ubuntu22.04 requires a paid subscription
+- 2024-06-21 Yicheng have a half-finished CAD but I don't think it's necessary to move forward.
+  -- I think it's okay to just get a board cut to be an ellipse which has its major axis as 1830mm, minor axis 1600mm.
++ 2024-06-21 Yicheng is planning on purchasing a new usb drive to install ubuntu22.04 which comes with a native RT kernel.
+-
++
+-
++
+-
+------------------------------------------------------------------------------------------
+
 
 ## License
 This repository is licensed under the MIT License. See the [LICENSE](path/to/LICENSE) file for more details.
