@@ -45,12 +45,31 @@ Safety is paramount when operating the Flexiv Rizon 4 robot. Please refer to the
 Regular maintenance is crucial to keep the robot in optimal working condition. Refer to the [Maintenance Schedule](path/to/Maintenance_Schedule.pdf) for detailed instructions on maintaining the robot.
 
 ## Hello World
+Again, this section is written based on the [User manual](https://rdk.flexiv.com/manual/index.html). 
 Here in this section is also a step-by-step guide to play with Flexiv Rizon 4 in our lab.
 I assume you start with a blank system. (Just like what I have now)
 And I assume you followed the [Getting started Section](#Getting-started)
 
+
+$${\color{red}ATTENTION}$$
+
 **Meaning you already finished the first three steps, especially went over the safety protocol**
 
+Then you are good to proceed
+
+### Setup the Robot
+Prepare your teach pendant, the Windows Surface Tablet. Charge it.
+
+#### Light the robot up
+Make sure nothing/no one is within the range of robot. Have the control bar in hand, make sure the emergency stop is engaged, and turn on the power switch.
+**Before proceeding, make sure the robot is securely mounted onto a steady base and won’t topple over when moving at a high speed with sudden stops.**
+
+#### Connect the UI tablet(teach pendant)
+Either with cable or not
+Then enable the robot, click 'on' 
+
+#### Activate RDK server.
+OOPS === This is where I left ---- Will be back
 
 -----------------------------------------------------------
 
