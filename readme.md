@@ -1,5 +1,8 @@
 ------------------------------------------------------------------------------------------
 + # Current State
++ 2024-07-24 Yicheng start patching the new ubuntu20.04 native kernel according to the instructions listed in the [RT-Kernel-Patching](#RT-Kernel-Patching) section below
++ 2024-07-23 Yicheng installed a new ubuntu20.04 on another partition in the lab computer, name `scram-rt`
++ 2024-07-21 Yicheng discovered that the native RT kernel in ubuntu22.04 requires a paid subscription
 - 2024-06-21 Yicheng have a half-finished CAD but I don't think it's necessary to move forward.
   -- I think it's okay to just get a board cut to be an ellipse which has its major axis as 1830mm, minor axis 1600mm.
 + 2024-06-21 Yicheng is planning on purchasing a new usb drive to install ubuntu22.04 which comes with a native RT kernel.
@@ -56,6 +59,8 @@ Safety is paramount when operating the Flexiv Rizon 4 robot. Please refer to the
 
 ## Maintenance Schedule
 Regular maintenance is crucial to keep the robot in optimal working condition. Refer to the [Maintenance Schedule](path/to/Maintenance_Schedule.pdf) for detailed instructions on maintaining the robot.
+
+## RT Kernel Patching
 
 ## Troubleshooting
 Encountering issues? Check out our [Troubleshooting Guide](path/to/Troubleshooting.pdf) for solutions to common problems.
