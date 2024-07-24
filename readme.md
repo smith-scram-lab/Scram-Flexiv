@@ -127,12 +127,47 @@ CONFIG_SYSTEM_REVOCATION_KEYS="/usr/local/src/debian/canonical-revoked-certs.pem
 # end of Certificates for signature checking
 
 ```
+### Build and Install
 
+`sudo make` And wait for a lonnnng time
 
+Fix any error that might pop out
 
+`sudo make modules_install`
+`sudo make install`
 
+### Real-Time User Privileges
 
+```
+sudo groupadd realtime
+sudo usermod -aG realtime $(whoami)
+```
+Edit `/etc/security/limits.conf` to contain... (you might need admin access to edit it `sudo vi limits.conf`)
 
+```
+@realtime soft rtprio 99
+@realtime soft priority 99
+@realtime soft memlock 102400
+@realtime hard rtprio 99
+@realtime hard priority 99
+@realtime hard memlock 102400
+```
+
+### Grub Settings
+Edit `/etc/default/grub` (you might also need admin access to edit it `sudo vi grub`)
+
+Change it to contain:
+```
+ GRUB_DEFAULT=saved
+ GRUB_SAVEDEFAULT=true
+```
+Update Grub
+
+`sudo update-grub`
+
+Reboot and apply the changes
+
+`sudo reboot`
 
 
 ## Troubleshooting
