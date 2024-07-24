@@ -70,7 +70,19 @@ Then enable the robot, click 'on'
 
 #### Activate RDK server.
 Follow this [guide](https://rdk.flexiv.com/manual/activate_rdk_server.html) Because this is a robot-side setting rather than a user side setting. 
+I set remote mode to Standard RDK mode. It seems like we don't have a licensed 'teleoperation' mode which supports real time.
 
+### Enter Remote Moded
+Power off the robot, do not power on yet
+
+Toggle the Auto/Manual Slide Switch on the motion bar to the upper position(the Auto position) 
+
+Power on the Robot.
+
+IF successful, on the Tablet you can see Mode: Auto(Remote)
+
+### Establish Connection
+>>>Work in Progress, come back later~<<<
 -----------------------------------------------------------
 
 
