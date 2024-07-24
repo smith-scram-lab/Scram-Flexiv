@@ -1,5 +1,8 @@
 ------------------------------------------------------------------------------------------
 + # Current State
++ 
++ 2024-07-24 Yicheng now updating the software setup. 
++ 2024-07-24 The RT kernel is patched successfully. `5.15.160-rt77`
 + 2024-07-24 Yicheng start patching the new ubuntu20.04 native kernel according to the instructions listed in the [RT-Kernel-Patching](#RT-Kernel-Patching) section below
 + 2024-07-23 Yicheng installed a new ubuntu20.04 on another partition in the lab computer, name `scram-rt`
 + 2024-07-21 Yicheng discovered that the native RT kernel in ubuntu22.04 requires a paid subscription
@@ -42,8 +45,8 @@ Follow these steps to get started with the Flexiv Rizon 4 robot:
 
 ## Software Setup
 1. **Connect Teach Pendant**: Connect the teach pendant to the robot via Wi-Fi or a wired connection.
-2. **Initial Configuration**: Follow the instructions in the [User Manual](https://rdk.flexiv.com/manual/index.html) to perform the initial configuration and test-run your first program.
-3. **Flexiv Elements**: Use Flexiv Elements software to control the robot and execute programs. Refer to the [Training Video](path/to/Training_Video.pdf) for a detailed guide on using the software.
+2. **Initial Configuration**: Follow the instructions in the [User Manual](https://rdk.flexiv.com/manual/index.html) to perform the initial configuration and test-run your first program. Step by step guide can be found in this [section](#step-by-step-software)
+4. **Flexiv Elements**: Use Flexiv Elements software to control the robot and execute programs. Refer to the [Training Video](path/to/Training_Video.pdf) for a detailed guide on using the software.
 
 ## Safety Protocols
 Safety is paramount when operating the Flexiv Rizon 4 robot. Please refer to the [Safety Section](path/to/User_Manual.pdf#page=5) of the User Manual for detailed safety instructions and protocols.
@@ -171,6 +174,77 @@ Reboot and apply the changes
 
 ### Check if the kernel is patched correctly
 `uname -r` and look for 'rt' keyword
+
+## Step By Step Software
+I'm a big conda user and I encourage you to do the same. :D
+
+### Conda installation
+Thus, before we install anything, install [Anaconda](https://docs.anaconda.com/anaconda/install/linux/). Follow [this guide](https://docs.anaconda.com/anaconda/install/linux/).
+
+The conda distribution used here is `Anaconda3-2024.06-1-Linux-x86_64.sh`
+
+### Conda env create and activate
+
+`conda create -n flexiv python=3.10` (why 3.10? just because, also because in the manual the default python version is 3.10)
+`conda activate flexiv`
+
+### [C++ RDK](https://rdk.flexiv.com/manual/install_on_linux.html#c-rdk)
+#### Prepare build tools
+This I just use system wide installation
+`sudo apt install build-essential cmake cmake-qt-gui -y` 
+
+#### Download RDK
+------Written on 07/24/2024------
+Obviously you need to install `git` if you still don't have it
+`sudo apt-get install git`
+Go to the directory that you want to build this RDK
+```
+git clone https://github.com/flexivrobotics/flexiv_rdk.git
+cd flexiv_rdk
+git checkout v1.4
+```
+#### Install C++ dependencies
+Choose a directory, in my case, `/flexiv_rdk_cpp`
+```
+cd flexiv_rdk/thirdparty
+bash build_and_install_dependencies.sh ~/flexiv_rdk_cpp
+```
+#### Install C++ RDK
+After all dependencies are installed, open a new terminal and use CMake to confiure the flexiv_rdk project
+```
+cd flexiv_rdk
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=~/flexiv_rdk_cpp
+cmake --build . --target install --config Release
+
+```
+If the installation was successful, you can find these following directories in the `/flexiv_rdk_cpp` folder
+```
+include/flexiv/rdk/
+lib/cmake/flexiv_rdk/
+```
+#### Link to C++ RDK from a user program
+*I copied the following from the manual, not sure what to do here. But I think if this can run successfully, your installation is correct. BRAVO!*
+After C++ RDK is installed, it can be found as a CMake library and linked to by other CMake projects. Use the provided examples project for instance:
+```
+cd flexiv_rdk/example
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=~/flexiv_rdk_cpp
+cmake --build . --config Release -j 4
+```
+
+### Python RDK
+### Dependencies
+Here according to the manual we want to install numpy and spdlog
+`pip install numpy spdlog`
+
+### Build Flexiv RDK
+```
+mkdir flexiv_rdk && cd flexiv_rdk
+mkdir build && cd build
+```
+
+
 
 
 ## Troubleshooting
