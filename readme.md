@@ -82,6 +82,16 @@ Power on the Robot.
 IF successful, on the Tablet you can see Mode: Auto(Remote)
 
 ### Establish Connection
+
+If Real time is needed, the direct wired connection is required. 
+
+The default robot_ip is `192.168.2.100`
+`ping 192.168.2.100`
+
+### Verify with example programs
+
+Our robot serial number: [`Rizon4s-062445`]
+
 >>>Work in Progress, come back later~<<<
 -----------------------------------------------------------
 
